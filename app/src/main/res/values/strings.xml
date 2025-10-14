@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Vital Tracker</string>
+    <string name="save_button_text">Save</string>
+    <string name="High_BP_input_hint">Systolic BP</string>
+    <string name="Low_blood_pressure_hint">Diastolic BP</string>
+    <string name="Pulse_Rate_hint">Pulse Rate</string>
+    <string name="sugar_level_hint">Sugar Level</string>
+    <string name="oxygen_level_hint">Oxygen Level Sp02</string>
+    <string name="temperature_hint">Temperature</string>
+    <string name="Weight_hint">Weight</string>
+    <string name="select_date">Select Date</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- Other strings -->
+    <string name="load_data">Load Data</string>
+    <string name="vitals_data">Date: %1$s\nSystolic BP: %2$s\nDiastolic BP: %3$s\nPulse: %4$s\nSugar: %5$s\nOxygen:
+        %6$s\nTemperature: %7$s\nWeight: %8$s
+    </string>
+    <string name="View_data">Weekly Data </string>>
+    <string name="no_data">No data found for the selected date.</string>
+    <string name="menu_button_description">Open Side Menu</string>
+    <string name="Menu">Menu</string>
+</resources>

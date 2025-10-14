@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nav_menu"
+            android:padding="16dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/menu_button_description"/>
+
+        <TextView
+            android:id="@+id/tvCurrentDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textAlignment="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/select_date"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnMenu" />
+
+        <EditText
+            android:id="@+id/etHBp"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:autofillHints="High Blood Pressure"
+            android:hint="@string/High_BP_input_hint"
+            android:textColor="@android:color/white"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/tvCurrentDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/etHBp"
+            app:layout_constraintStart_toStartOf="@id/etHBp"
+            app:layout_constraintEnd_toEndOf="@id/etHBp"/>
+
+        <EditText
+            android:id="@+id/etLBp"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:autofillHints="Low Blood Pressure"
+            android:hint="@string/Low_blood_pressure_hint"
+            android:textColor="@android:color/white"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/divider1"
+            app:layout_constraintStart_toStartOf="@id/etHBp"
+            app:layout_constraintEnd_toEndOf="@id/etHBp"/>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/etLBp"
+            app:layout_constraintStart_toStartOf="@id/etLBp"
+            app:layout_constraintEnd_toEndOf="@id/etLBp"/>
+
+        <EditText
+            android:id="@+id/etPulse"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:autofillHints="Pulse Rate"
+            android:hint="@string/Pulse_Rate_hint"
+            android:textColor="@android:color/white"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:layout_constraintStart_toStartOf="@id/etLBp"
+            app:layout_constraintEnd_toEndOf="@id/etLBp"/>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/etPulse"
+            app:layout_constraintStart_toStartOf="@id/etPulse"
+            app:layout_constraintEnd_toEndOf="@id/etPulse"/>
+
+        <EditText
+            android:id="@+id/etSugar"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:autofillHints="Sugar Level"
+            android:hint="@string/sugar_level_hint"
+            android:textColor="@android:color/white"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/divider3"
+            app:layout_constraintStart_toStartOf="@id/etPulse"
+            app:layout_constraintEnd_toEndOf="@id/etPulse"/>
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/etSugar"
+            app:layout_constraintStart_toStartOf="@id/etSugar"
+            app:layout_constraintEnd_toEndOf="@id/etSugar"/>
+
+        <EditText
+            android:id="@+id/etOxygen"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:autofillHints="Sp02 Level"
+            android:hint="@string/oxygen_level_hint"
+            android:textColor="@android:color/white"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/divider4"
+            app:layout_constraintStart_toStartOf="@id/etSugar"
+            app:layout_constraintEnd_toEndOf="@id/etSugar"/>
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/etOxygen"
+            app:layout_constraintStart_toStartOf="@id/etOxygen"
+            app:layout_constraintEnd_toEndOf="@id/etOxygen"/>
+
+        <EditText
+            android:id="@+id/etTemperature"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:autofillHints="Body Temperature"
+            android:hint="@string/temperature_hint"
+            android:textColor="@android:color/white"
+            android:inputType="numberDecimal"
+            app:layout_constraintTop_toBottomOf="@id/divider5"
+            app:layout_constraintStart_toStartOf="@id/etOxygen"
+            app:layout_constraintEnd_toEndOf="@id/etOxygen"/>
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/etTemperature"
+            app:layout_constraintStart_toStartOf="@id/etTemperature"
+            app:layout_constraintEnd_toEndOf="@id/etTemperature"/>
+
+        <EditText
+            android:id="@+id/etWeight"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:autofillHints="Body Weight"
+            android:hint="@string/Weight_hint"
+            android:textColor="@android:color/white"
+            android:inputType="numberDecimal"
+            app:layout_constraintTop_toBottomOf="@id/divider6"
+            app:layout_constraintStart_toStartOf="@id/etTemperature"
+            app:layout_constraintEnd_toEndOf="@id/etTemperature"/>
+
+        <View
+          android:id="@+id/divider7"
+          android:layout_width="0dp"
+          android:layout_height="1dp"
+          android:background="@android:color/darker_gray"
+          android:layout_marginTop="8dp"
+          app:layout_constraintTop_toBottomOf="@id/etWeight"
+          app:layout_constraintStart_toStartOf="@id/etWeight"
+          app:layout_constraintEnd_toEndOf="@id/etWeight"/>
+
+         <Button
+             android:id="@+id/btnSave"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:minHeight="58dp"
+             android:minWidth="64dp"
+             android:text="@string/save_button_text"
+             android:layout_marginTop="5dp"
+             app:layout_constraintTop_toBottomOf="@id/divider7"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout_constraintWidth_percent="0.2"
+        app:menu="@menu/navigation_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
